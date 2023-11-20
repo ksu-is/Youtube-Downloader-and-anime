@@ -2,9 +2,3 @@ import tkinter
 import customtkinter
 from pytube import Youtube
 
-
-# General System
-customtkinter.set_appearance._mode("System")
-customtkinter.set_default_color_theme("red")
-
-# app Frame
