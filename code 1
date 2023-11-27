@@ -3,8 +3,8 @@ import customtkinter
 from pytube import Youtube
 
 # General System
-customtkinter.set_appearance._mode("System")
-customtkinter.set_default_color_theme("red")
+customtkinter.set_appearance_mode("System")
+customtkinter.set_default_color_theme("blue")
 
 # app Frame
 app = customtkinter.CTk()
@@ -13,3 +13,4 @@ app.title("Youtube Downloader")
 
 # run app
 app.mainloop()
+# Debug to where the code is suppose to run natural
