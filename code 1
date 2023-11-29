@@ -1,6 +1,19 @@
 import tkinter
 import customtkinter
-from pytube import Youtube
+from pytube import YouTube
+
+def startDownload():
+    try:
+        ytlink = link.get()
+        ytObject = YouTube(ytlink)
+        video = ytObject.streams.get_highest_resolution()
+        video.download
+    except:
+        print("It dont work try again")
+    print("Here is your Video!")
+
+
+
 
 # General System
 customtkinter.set_appearance_mode("System")
@@ -11,6 +24,16 @@ app = customtkinter.CTk()
 app.geometry("720x480")
 app.title("Youtube Downloader")
 
+# adding UI elements
+title = customtkinter.CTkLabel(app, text="Insert Favorite YouTube Video!")
+title.pack(padx=10, pady= 10)
+
+# link input
+url_var = tkinter.StringVar()
+link = customtkinter.CTkEntry(app, width=350, height=40, textvariable=url_var)
+link.pack()
+# Download button
+download = customtkinter.CTkButton(app, text="Download", command=startDownload)
+download.pack(padx=10, pady=10)
 # run app
 app.mainloop()
-# Debug to where the code is suppose to run natural
